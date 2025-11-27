@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portal da Turma</title>
+
+  <style>
+    :root{
+      --c1:#2563eb;
+      --c2:#7c3aed;
+      --bg:#f6f7fb;
+      --txt:#111827;
+    }
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:var(--txt);
+    }
+    header{
+      background:linear-gradient(90deg,var(--c1),var(--c2));
+      color:#fff;
+      padding:12px 16px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      justify-content:space-between;
+      align-items:center;
+      box-shadow:0 2px 8px rgba(0,0,0,.15);
+    }
+    header .title{
+      font-weight:800;
+      font-size:18px;
+    }
+    header nav{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      align-items:center;
+    }
+    a{
+      color:var(--c1);
+      text-decoration:none;
+    }
+    .btn{
+      background:#fff;
+      color:#111827;
+      border:none;
+      border-radius:999px;
+      padding:6px 14px;
+      font-size:13px;
+      cursor:pointer;
+      text-decoration:none;
+      display:inline-block;
+      font-weight:600;
+    }
+    .btn-primary{
+      background:#111827;
+      color:#fff;
+    }
+    .btn-outline{
+      background:transparent;
+      border:1px solid #e5e7eb;
+      color:#fff;
+    }
+    .container{
+      max-width:1100px;
+      margin:20px auto;
+      padding:0 12px;
+    }
+    .card{
+      background:#fff;
+      border-radius:16px;
+      border:1px solid #e5e7eb;
+      box-shadow:0 6px 20px rgba(15,23,42,.08);
+      padding:18px;
+      margin-bottom:16px;
+    }
+    .hero{
+      display:grid;
+      grid-template-columns:minmax(0,2fr) minmax(260px,1.2fr);
+      gap:16px;
+      align-items:stretch;
+    }
+    .hero-left-title{
+      font-size:26px;
+      font-weight:800;
+      margin-bottom:6px;
+    }
+    .hero-left-sub{
+      font-size:14px;
+      color:#4b5563;
+      margin-bottom:14px;
+    }
+    .hero-metrics{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:10px;
+    }
+    .metric{
+      background:#f9fafb;
+      border-radius:14px;
+      border:1px solid #e5e7eb;
+      padding:10px;
+      text-align:center;
+      font-size:12px;
+    }
+    .metric b{font-size:18px;display:block;margin-top:4px;}
+    .badge{
+      display:inline-block;
+      padding:2px 8px;
+      border-radius:999px;
+      font-size:11px;
+      background:#eff6ff;
+      color:#1d4ed8;
+      border:1px solid #bfdbfe;
+    }
+    .hero-right-title{
+      font-size:16px;
+      font-weight:700;
+      margin-bottom:8px;
+    }
+    .hero-right-list{
+      font-size:13px;
+      color:#4b5563;
+      padding-left:18px;
+    }
+    .hero-right-list li{
+      margin-bottom:4px;
+    }
+    .section-title{
+      font-size:18px;
+      font-weight:700;
+      margin-bottom:8px;
+    }
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:12px;
+    }
+    .feature{
+      font-size:13px;
+      color:#4b5563;
+    }
+    .feature h3{
+      font-size:14px;
+      margin:0 0 4px 0;
+    }
+    .footer{
+      font-size:12px;
+      color:#6b7280;
+      text-align:center;
+      padding:14px 0 24px;
+    }
+    @media(max-width:900px){
+      .hero{
+        grid-template-columns:1fr;
+      }
+      .hero-metrics{
+        grid-template-columns:repeat(2,1fr);
+      }
+      .grid-3{
+        grid-template-columns:1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="title">Portal da Turma</div>
+    <nav>
+      <a href="#como-funciona" class="btn btn-outline">Como funciona</a>
+      <a href="#series" class="btn btn-outline">Séries e matérias</a>
+      <a href="#professor" class="btn btn-outline">Para o professor</a>
+      <!-- IMPORTANTE: troque o # pela URL real do seu portal PHP -->
+      <a href="https://SEU-DOMINIO-OU-HOSPEDAGEM/index.php" class="btn btn-primary">
+        Entrar no portal
+      </a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card hero">
+      <div>
+        <div class="hero-left-title">Treinos de Matemática e Química com correção automática</div>
+        <div class="hero-left-sub">
+          Seu portal de listas, simulados e acompanhamento de desempenho para Ensino Fundamental II e Ensino Médio.
+        </div>
+        <div class="hero-metrics">
+          <div class="metric">
+            Alunos<br><b>+100</b>
+          </div>
+          <div class="metric">
+            Listas<br><b>+50</b>
+          </div>
+          <div class="metric">
+            Questões<br><b>+1.000</b>
+          </div>
+          <div class="metric">
+            Tentativas<br><b>+5.000</b>
+          </div>
+        </div>
+        <div style="margin-top:14px;">
+          <!-- Mesma coisa aqui: link para o PHP -->
+          <a href="https://SEU-DOMINIO-OU-HOSPEDAGEM/index.php" class="btn btn-primary">
+            Entrar como aluno
+          </a>
+          <a href="#professor" class="btn">Sou professor</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="hero-right-title">Como funciona na prática</div>
+        <ul class="hero-right-list">
+          <li>O aluno acessa com usuário e senha fornecidos pelo professor.</li>
+          <li>Escolhe a lista da série e matéria.</li>
+          <li>Resolve em modo simulado ou questão a questão.</li>
+          <li>O sistema corrige, guarda resultados e mostra o passo a passo.</li>
+        </ul>
+        <p style="font-size:12px;color:#6b7280;margin-top:10px;">
+          Este site em HTML é apenas a <b>vitrine</b>. A área de login e as listas funcionam no
+          portal completo em PHP, com banco de dados e correção automática.
+        </p>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="card">
+      <div class="section-title">Como o portal ajuda os alunos</div>
+      <div class="grid-3">
+        <div class="feature">
+          <h3>Simulados por série</h3>
+          <p>Listas organizadas por 6º ao 9º ano EF e 1ª a 3ª série EM, alinhadas ao que cai em prova.</p>
+        </div>
+        <div class="feature">
+          <h3>Correção imediata</h3>
+          <p>Modo simulado corrige tudo no final; modo passo a passo mostra feedback questão a questão.</p>
+        </div>
+        <div class="feature">
+          <h3>Gabarito explicado</h3>
+          <p>Além da alternativa correta, o aluno vê explicações em linguagem simples para revisar o conteúdo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="series" class="card">
+      <div class="section-title">Séries e disciplinas atendidas</div>
+      <p style="font-size:13px;color:#4b5563;">
+        O portal trabalha hoje com:
+      </p>
+      <ul style="font-size:13px;color:#4b5563;">
+        <li><span class="badge">6º ao 9º ano EF</span> – foco em aritmética, frações, porcentagem, equações, geometria básica.</li>
+        <li><span class="badge">1ª a 3ª série EM</span> – funções, progressões, estatística, trigonometria e mais.</li>
+        <li><span class="badge">Química</span> – conteúdos selecionados para provas, vestibulares e ENEM.</li>
+      </ul>
+    </section>
+
+    <section id="professor" class="card">
+      <div class="section-title">Para o professor</div>
+      <div class="grid-3">
+        <div class="feature">
+          <h3>Cadastro de alunos</h3>
+          <p>Você cria logins, acompanha frequência e organiza as turmas em um só lugar.</p>
+        </div>
+        <div class="feature">
+          <h3>Importação de listas</h3>
+          <p>Copie seu modelo padrão em TXT/DOCX e o portal gera automaticamente as questões.</p>
+        </div>
+        <div class="feature">
+          <h3>Relatórios Inside</h3>
+          <p>Veja quem acessou, quantas tentativas fez e quais questões têm maior índice de erro.</p>
+        </div>
+      </div>
+      <p style="font-size:13px;color:#4b5563;margin-top:10px;">
+        A área administrativa (cadastro, frequência, pagamentos, relatórios) continua rodando
+        no portal completo em PHP com banco de dados. Este site HTML serve como
+        apresentação oficial para alunos e responsáveis.
+      </p>
+    </section>
+
+    <section class="card">
+      <div class="section-title">Acesso ao portal completo</div>
+      <p style="font-size:13px;color:#4b5563;">
+        Se você já é aluno, clique no botão abaixo para acessar o portal com login e senha:
+      </p>
+      <!-- TROCAR URL AQUI TAMBÉM -->
+      <a href="https://SEU-DOMINIO-OU-HOSPEDAGEM/index.php" class="btn btn-primary">
+        Acessar portal PHP completo
+      </a>
+    </section>
+
+    <div class="footer">
+      Portal da Turma — desenvolvido para aulas de Matemática e Química.<br>
+      Área do aluno e do professor rodando em PHP com banco de dados SQLite.
+    </div>
+  </main>
+
+</body>
+</html>
